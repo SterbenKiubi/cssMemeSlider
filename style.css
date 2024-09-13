@@ -41,7 +41,7 @@
 }
 .wrapper, .controls {
     display: flex;
-    width: 20%;
+    width: 100%;
 }
 .controls {
     justify-content: flex-end;
@@ -50,7 +50,19 @@
 .controls label {
     width: 20px;
     height: 20px;
+    background-color: rgb(120, 120, 240);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    border: 3px solid rgb(120, 120, 240);
+}
+.controls label:hover {
+    background-color: white;
+    border-color: white;
+}
+.switch input:nth-child(1):checked ~ .controls label:nth-child(1), 
+.switch input:nth-child(2):checked ~ .controls label:nth-child(2), 
+.switch input:nth-child(3):checked ~ .controls label:nth-child(3), 
+.switch input:nth-child(4):checked ~ .controls label:nth-child(4) {
     background-color: rgb(44, 42, 42);
-    border: 4px solid blue;
-    border-radius: 50%;
 }
