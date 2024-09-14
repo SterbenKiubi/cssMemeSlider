@@ -2,67 +2,91 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    
 }
-.page-container {
+.container {
     width: 100%;
     height: 100vh;
-    background-color: rgb(44, 42, 42);
+    background: rgb(65, 61, 61);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .switch input {
     display: none;
 }
-.page-container_main-container {
-    width: 95%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.container_img-container {
-    height: 80%;
-}
-.container_img-container img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-.page-container_main-container_content {
-    display: flex;
-    justify-content: space-between;
-    height: 15%;
-}
-.wrapper, .controls {
-    display: flex;
-    width: 100%;
-}
 .controls {
-    justify-content: flex-end;
+    position: absolute;
+    bottom: 10%;
+    left: 91%;
+    transform: translateX(-50%);
+    display: flex;
     gap: 10px;
+    z-index: 100;
 }
 .controls label {
     width: 20px;
     height: 20px;
-    background-color: rgb(120, 120, 240);
+    background: rgb(115, 115, 238);
     border-radius: 20px;
     cursor: pointer;
+    border: 3px solid rgb(115, 115, 238);
     transition: .5s;
-    border: 3px solid rgb(120, 120, 240);
 }
 .controls label:hover {
-    background-color: white;
     border-color: white;
+    background-color: white;
 }
-.switch input:nth-child(1):checked ~ .controls label:nth-child(1), 
-.switch input:nth-child(2):checked ~ .controls label:nth-child(2), 
-.switch input:nth-child(3):checked ~ .controls label:nth-child(3), 
+.switch input:nth-child(1):checked ~ .controls label:nth-child(1),
+.switch input:nth-child(2):checked ~ .controls label:nth-child(2),
+.switch input:nth-child(3):checked ~ .controls label:nth-child(3),
 .switch input:nth-child(4):checked ~ .controls label:nth-child(4) {
-    background-color: rgb(44, 42, 42);
+    background: rgb(65, 61, 61);
+}
+.wrapper {
+    position: relative;
+    width: 400vw;
+    display: flex;
+    justify-content: space-around;
+    transition: .5s;
+    padding-top: 20px;
+}
+.wrapper .box {
+    width: 90vw;
+    height: 75vh;
+    display: flex;
+}
+.wrapper .box:nth-child(1) {
+    background-image: url(img/mrbear_1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+.wrapper .box:nth-child(2) {
+    background-image: url(img/mrbean_2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+.wrapper .box:nth-child(3) {
+    background-image: url(img/keep_going.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+.wrapper .box:nth-child(4) {
+    background-image: url(img/tupik.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+.switch input:nth-child(1):checked ~ .wrapper {
+    left: 0;
+}
+.switch input:nth-child(2):checked ~ .wrapper {
+    left: -100vw;
+}
+.switch input:nth-child(3):checked ~ .wrapper {
+    left: -200vw;
+}
+.switch input:nth-child(4):checked ~ .wrapper {
+    left: -300vw;
 }
