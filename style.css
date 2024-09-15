@@ -30,10 +30,14 @@
     cursor: pointer;
     border: 3px solid rgb(115, 115, 238);
     transition: .5s;
+    padding: 10px 10px;
 }
 .controls label:hover {
     border-color: white;
     background-color: white;
+}
+.controls label:active {
+    cursor: progress;
 }
 .switch input:nth-child(1):checked ~ .controls label:nth-child(1),
 .switch input:nth-child(2):checked ~ .controls label:nth-child(2),
