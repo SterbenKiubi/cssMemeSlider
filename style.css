@@ -16,7 +16,7 @@
 .controls {
     position: absolute;
     bottom: 10%;
-    left: 91%;
+    left: 90vw;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
@@ -48,6 +48,7 @@
     justify-content: space-around;
     transition: .5s;
     padding-top: 20px;
+    overflow: hidden;
 }
 .wrapper .box {
     width: 90vw;
@@ -88,5 +89,32 @@
     left: -200vw;
 }
 .switch input:nth-child(4):checked ~ .wrapper {
+    left: -300vw;
+}
+.content {
+    display: flex;
+    width: 400vw;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10%;
+    transition: .5s;
+}
+.content .text {
+    width: 90vw;
+}
+.content .text p {
+    color: white;
+    font-size: 25px;
+}
+.switch input:nth-child(1):checked ~ .content {
+    left: 0;
+}
+.switch input:nth-child(2):checked ~ .content {
+    left: -100vw;
+}
+.switch input:nth-child(3):checked ~ .content {
+    left: -200vw;
+}
+.switch input:nth-child(4):checked ~ .content {
     left: -300vw;
 }
